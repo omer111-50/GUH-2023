@@ -3,9 +3,9 @@ const flashingDiv = document.getElementById("flashing-div");
 const mouseTrail = document.getElementById("mouse-trail");
 
 invisibleButton.addEventListener("click", () => {
-  alert("You found the invisible button! Level 1 Complete!");
+  alert("🥳 You found the invisible button! Level 1 Complete!");
 
-  window.location.href = "level2.html";
+  window.location.href = "level2/level2.html";
 });
 
 document.addEventListener("mousemove", (e) => {
