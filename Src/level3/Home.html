@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Frustrating Game</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        #start-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        #start-button {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        #start-button:hover {
+            background-color: #2980b9;
+        }
+        #game-container {
+            position: relative;
+            margin: 100px auto;
+            width: 200px;
+            height: 200px;
+            display: none;
+        }
+        #game-button {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #3498db;
+            border: none;
+            color: #fff;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        #reward-popup {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 20px;
+            border: 2px solid #333;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        #reward-popup img {
+            max-width: 100%;
+        }
+        #game-over {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 36px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Frustrating Game</h1>
+    <div id="start-container">
+        <button id="start-button">Start Game</button>
+    </div>
+    <p id="score">Score: 0</p>
+    <div id="game-container">
+        <button id="game-button">Click Me</button>
+        <p id="game-over" style="display: none; font-size: 36px; color: red;">Game Over</p>
+    </div>
+    <p id="timer">Time: 10</p>
+    <div id="reward-popup">
+        <p>Congratulations! This is your reward:</p>
+        <img src="IMG_2409.JPG" alt="Reward Image">
+        <audio id="reward-audio" >
+            <source src="scary-scream-sound-effect.mp3" type="audio/mpeg">
+        </audio>
+        <p id="reward-timer"></p>
+    </div>
+    <script>
+        let score = 0;
+        let time = 10; // Set the initial time to 10 seconds
+        let timerInterval;
+        let rewardTimeout;
+        let audioPlayed = false;
+
+        const startContainer = document.getElementById('start-container');
+        const startButton = document.getElementById('start-button');
+        const gameContainer = document.getElementById('game-container');
+        const gameButton = document.getElementById('game-button');
+        const scoreDisplay = document.getElementById('score');
+        const timerDisplay = document.getElementById('timer');
+        const rewardPopup = document.getElementById('reward-popup');
+        const rewardTimer = document.getElementById('reward-timer');
+        const rewardAudio = document.getElementById('reward-audio');
+        const gameOver = document.getElementById('game-over');
+
+        function startGame() {
+            startContainer.style.display = 'none';
+            gameContainer.style.display = 'block';
+            startTimer();
+        }
+
+        function startTimer() {
+            timerInterval = setInterval(() => {
+                time--;
+                timerDisplay.textContent = `Time: ${time}`;
+                if (time <= 0) {
+                    endGame();
+                }
+            }, 1000);
+        }
+
+        function endGame() {
+    clearInterval(timerInterval);
+    gameButton.removeEventListener('click', incrementScore);
+    gameButton.style.display = 'none';
+    gameOver.style.display = 'block'; // Show the "Game Over" message
+    document.body.style.backgroundColor = '#000000';
+    showRewardPopup();
+    setTimeout(() => {
+        alert("Since we're nice, we will move you to the final challenge");
+    }, 25000); // Display the alert after 5 seconds
+}
+
+        function incrementScore() {
+            score++;
+            scoreDisplay.textContent = `Score: ${score}`;
+            moveButtonRandomly();
+        }
+
+        function moveButtonRandomly() {
+            const maxX = gameContainer.clientWidth - gameButton.clientWidth;
+            const maxY = gameContainer.clientHeight - gameButton.clientHeight;
+
+            const randomX = Math.floor(Math.random() * maxX);
+            const randomY = Math.floor(Math.random() * maxY);
+
+            gameButton.style.left = randomX + 'px';
+            gameButton.style.top = randomY + 'px';
+        }
+
+        function showRewardPopup() {
+            rewardPopup.style.display = 'block';
+            if (!audioPlayed) {
+                rewardAudio.play();
+                audioPlayed = true;
+            }
+            setTimeout(() => {
+                rewardPopup.style.display = 'none';
+                rewardTimer.textContent = '';
+                rewardAudio.pause();
+            }, 7000);
+        }
+
+        startButton.addEventListener('click', startGame);
+        gameButton.addEventListener('click', incrementScore);
+        moveButtonRandomly();
+    </script>
+</body>
+</html>
