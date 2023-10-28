@@ -39,9 +39,11 @@ function endGame() {
   document.body.style.backgroundColor = "#000000";
   showRewardPopup();
   setTimeout(() => {
-    alert("Since we're nice, we will move you to the final challenge");
+    alert(
+      "... .. -. -.-. . / .-- . .----. .-. . / -. .. -.-. . --..-- / .-- . / .-- .. .-.. .-.. / -- --- ...- . / -.-- --- ..- / - --- / - .... . / ..-. .. -. .- .-.. / -.-. .... .- .-.. .-.. . -. --. ."
+    );
     window.location.href = "../level3/level3.html";
-  }, 3000); // Display the alert after 5 seconds
+  }, 5000); // Display the alert after 5 seconds
 }
 
 function incrementScore() {
@@ -71,7 +73,7 @@ function showRewardPopup() {
     rewardPopup.style.display = "none";
     rewardTimer.textContent = "";
     rewardAudio.pause();
-  }, 7000);
+  }, 3000);
 }
 
 startButton.addEventListener("click", startGame);

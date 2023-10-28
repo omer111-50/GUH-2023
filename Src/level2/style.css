@@ -1,8 +1,16 @@
 body {
+  background-color: pink;
   text-align: center;
-  background-color: #f0f0f0;
-  font-family: Arial, sans-serif;
+  font-family: "Comic Sans MS", cursive;
+  margin: 0;
+  color: yellowgreen;
 }
+
+.header {
+  background-color: yellow;
+  padding: 20px;
+}
+
 #start-container {
   position: absolute;
   top: 50%;
@@ -28,6 +36,8 @@ body {
   width: 200px;
   height: 200px;
   display: none;
+  padding: 20px;
+  border-radius: 20px;
 }
 #game-button {
   position: absolute;
