@@ -43,8 +43,8 @@ function toggleVisablity(id) {
   } else {
     document.getElementById(id).style.visibility = "visible";
     setTimeout(() => {
-      alert("Woops, too slow 😛 You will now progress to level 4!");
-      window.location.href = "../level4/level4.html";
+      alert("Now onto the bonus round!");
+      window.location.href = "../level5/level5.html";
     }, 2000);
   }
 }

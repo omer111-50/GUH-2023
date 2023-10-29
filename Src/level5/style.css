@@ -1,0 +1,77 @@
+body {
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(45deg, #ff0000, #00ff00, #0000ff);
+  animation: trippyBackground 5s linear infinite;
+  display: flex;
+  /* justify-content: center;
+  align-items: center; */
+  height: 100vh;
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 50px;
+  color: #ffff00;
+  animation: glitchText 0.1s infinite;
+}
+
+p {
+  font-size: 24px;
+  color: #ffffff;
+  animation: shakeText 0.2s infinite;
+}
+
+.spinning-image {
+  animation: spinImage 5s linear infinite;
+}
+
+@keyframes trippyBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes glitchText {
+  0% {
+    text-shadow: -5px 0 red, 5px 0 yellow;
+  }
+  25% {
+    text-shadow: -5px 0 yellow, 5px 0 blue;
+  }
+  50% {
+    text-shadow: -5px 0 blue, 5px 0 red;
+  }
+}
+
+@keyframes shakeText {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(5px);
+  }
+  50% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(-5px);
+  }
+}
+
+@keyframes spinImage {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
