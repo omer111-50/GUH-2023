@@ -1,6 +1,6 @@
 # GUH-2023
 
-Welcome to "The Bug in the Web Challenge," a quirky and entertaining web development challenge that defies convention and celebrates the absurd.
+Welcome to "WebWhimsy: A Symphony of Chaos", a quirky and entertaining web development challenge that defies convention and celebrates the absurd.
 
 ## Challenge Description
 
@@ -18,7 +18,7 @@ The goal is not to create a website with random irritating bugs but to design a 
 
 ## How To Play
 
-Playing "The Bug in the Web Challenge" is as simple as defying the ordinary and embracing the absurdity. Here's how to get started:
+Playing "WebWhimsy: A Symphony of Chaos" is as simple as defying the ordinary and embracing the absurdity. Here's how to get started:
 
 1. Clone or Download the Repository: First, clone the challenge repository to your local machine or download it as a ZIP file.
 
@@ -30,4 +30,4 @@ Playing "The Bug in the Web Challenge" is as simple as defying the ordinary and 
 
 5. Complete the Bonus Round: After conquering the four stages of annoying challenges, you'll have the chance to test your limits in the final bonus round. Can you defy expectations and master the absurd?
 
-Remember, there are no strict rules here, only creativity and a sense of humor. Enjoy the challenge, have fun, and don't be afraid to let your imagination run wild. "The Bug in the Web Challenge" is all about embracing the unconventional and crafting a website that's so wonderfully ludicrous, it's unforgettable. Good luck, and may the absurdity be with you!
+Remember, there are no strict rules here, only creativity and a sense of humor. Enjoy the challenge, have fun, and don't be afraid to let your imagination run wild. "WebWhimsy: A Symphony of Chaos" is all about embracing the unconventional and crafting a website that's so wonderfully ludicrous, it's unforgettable. Good luck, and may the absurdity be with you!
