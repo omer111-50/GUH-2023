@@ -57,25 +57,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   startButton.addEventListener("click", startGame);
 
-  // Event listeners for keyboard arrow keys
-  document.addEventListener("keydown", (event) => {
-    if (gameStarted) {
-      if (event.key === "ArrowLeft") {
-        if (isLeftButton) {
-          winGame();
-        } else {
-          loseGame();
-        }
-      } else if (event.key === "ArrowRight") {
-        if (!isLeftButton) {
-          winGame();
-        } else {
-          loseGame();
-        }
-      }
-    }
-  });
-
   // Add event listeners to restart buttons if needed
   restartButtons.forEach((button) => {
     button.addEventListener("click", () => {
