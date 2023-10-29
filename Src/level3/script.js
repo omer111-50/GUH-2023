@@ -39,6 +39,10 @@ document.addEventListener("DOMContentLoaded", () => {
     if (gameStarted) {
       if (isLeftButton) {
         winGame();
+        setTimeout(() => {
+          alert("Woops, too slow 😛 You will now progress to level 4!");
+          window.location.href = "../level4/level4.html";
+        }, 100);
       } else {
         loseGame();
       }

@@ -33,10 +33,14 @@ document.addEventListener("DOMContentLoaded", function () {
       alert(
         "You clicked the Omer! Omer is pleased move onto the next level :)"
       );
-      window.location.href = "https://www.example.com/nextpage";
-    } else if (clickedImageSrc.endsWith("../images/Ibraheem.jpg")) {
+      window.location.href = "../level2/level2.html";
+    } else if (clickedImageSrc.endsWith("/Ibraheem.jpg")) {
       alert("You caught a wild Ibraheem go checkout his LinkedIn profile!");
-    } else if (clickedImageSrc.endsWith("../images/Shaswar.jpg")) {
+      window.open(
+        "https://www.linkedin.com/in/john-cena-08bba6153/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+        "_blank"
+      );
+    } else if (clickedImageSrc.endsWith("/Shaswar.jpg")) {
       alert(
         "This is Shaswar also known as the BFG, don't be afraid he won't bite!"
       );

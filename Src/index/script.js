@@ -5,7 +5,7 @@ const mouseTrail = document.getElementById("mouse-trail");
 invisibleButton.addEventListener("click", () => {
   alert("🥳 You found the invisible button! Level 1 Complete!");
 
-  window.location.href = "level2/level2.html";
+  window.location.href = "level1/level1.html";
 });
 
 document.addEventListener("mousemove", (e) => {
