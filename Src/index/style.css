@@ -1,0 +1,90 @@
+body {
+  background-color: pink;
+  text-align: center;
+  font-family: "Comic Sans MS", cursive;
+  margin: 0;
+}
+
+.header {
+  background-color: yellow;
+  padding: 20px;
+  border-bottom: 5px solid red;
+}
+
+.animated-text {
+  font-size: 36px;
+  animation: colorChange 2s linear infinite alternate;
+}
+
+.content {
+  background-color: lightgreen;
+  padding: 20px;
+}
+
+.annoying-element {
+  border: 5px solid red;
+  padding: 20px;
+  border-radius: 20px;
+  margin: 20px;
+}
+
+.scrolling-text {
+  font-size: 20px;
+  color: red;
+  text-transform: uppercase;
+  animation: scrollText 1s linear infinite;
+}
+
+.invisible-button {
+  background: transparent;
+  border: none !important;
+  font-size: 12;
+  color: lightgreen;
+}
+
+.flashing-colors {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  animation: flashColors 0.2s linear infinite alternate;
+  margin: 20px auto;
+}
+
+.mouse-trail {
+  width: 20px;
+  height: 20px;
+  background-color: yellow;
+  border-radius: 50%;
+  position: absolute;
+  animation: mouseTrail 0.2s linear infinite;
+}
+
+@keyframes colorChange {
+  0% {
+    color: red;
+  }
+  100% {
+    color: blue;
+  }
+}
+
+@keyframes scrollText {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes flashColors {
+  0% {
+    background-color: red;
+  }
+  100% {
+    background-color: green;
+  }
+}
