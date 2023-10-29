@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Frustrating Game</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <h1>Frustrating Game</h1>
+    <div id="start-container">
+      <button id="start-button">Start Game</button>
+    </div>
+    <p id="score">Score: 0</p>
+    <div id="game-container">
+      <button id="game-button">Click Me</button>
+      <p id="game-over" style="display: none; font-size: 36px; color: red">
+        Game Over
+      </p>
+    </div>
+    <p id="timer">Time: 10</p>
+    <div id="reward-popup">
+      <p>Congratulations! This is your reward:</p>
+      <img src="../images/scary_omer.JPG" alt="Reward Image" />
+      <audio id="reward-audio">
+        <source
+          src="../images/scary-scream-sound-effect.mp3"
+          type="audio/mpeg"
+        />
+      </audio>
+      <p id="reward-timer"></p>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
